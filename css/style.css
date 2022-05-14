@@ -40,27 +40,25 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*КОНЕЦ ОБНУЛЕНИЯ*/
 
-.wrapper {
-	overflow: hidden;  /*не нужно*/ 
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-}
+.swiper {
+	width: 600px;
+	height: 300px;
+  }
 
 .container {
 	max-width: 1140px;
 	margin: 0px auto;
 	padding: 0px 20px;
-
-
 }
 
 .background {
 	width: 100%;
 	height: 100vh;
 	position: absolute;
-	z-index: -5;               /*лучше не использовать*/
 
+	top: 0px;
+	left: 0px;
+	z-index: -1;
 
 	background: url(../img/Background.png);
 	background-position: center;
@@ -69,12 +67,27 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .header {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	}
+
+.headernav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	padding: 5px 0;
+}
 
-	padding: 15px 0;
+.nav {
+	height: 160px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 0;
 
 }
 
@@ -84,50 +97,52 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	font-family: 'Roboto';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 20px;
 
 	color: rgb(255, 255, 255);
 }
-
-/*----------------------------------------*/
-
 .title {
-	height: 100vh;
-	flex: 1 1 auto;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-
+	padding: 20% 0;
 	font-family: 'Roboto';
 	font-style: normal;
 
 	color: rgb(255, 255, 255);
+
 }
 
 .h1 {
+	display: flex;
 	margin-bottom: 15px;
-	font-weight: 700;
+	font-weight: 900;
 	font-size: 40px;
 }
 
 .subtitle {
-
+	display: flex;
 	font-weight: 400;
 	font-size: 30px;
 
 }
 
+/*----------------------------------------*/
+
+
+
+.description {
+	padding: 150px 0px;
+}
+
+
 /*Контент*/
 
 .main {
 	flex: 1 1 auto;
-
+	/*background-color: rgb(255, 249, 226);*/
 }
 
-.description {
+.descriptioninfo {
 	display: flex;
+	padding: 10px 0px;
 
 }
 
@@ -180,7 +195,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .gallery {
-	margin: 15px;
+	padding: 15px;
 	display: flex;
 	justify-content: center;
 }
@@ -202,7 +217,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .textCONTACTS {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 
 	font-family: 'Roboto';
 	font-style: normal;
@@ -211,3 +227,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	font-size: 30px;
 	color: rgb(0, 0, 0);
 }
+
+.BIG {
+	
+	white-space: nowrap;
+
+	font-family: 'Roboto';
+	font-style: normal;
+
+	font-weight: 700;
+	font-size: 500px;
+	color: rgba(237, 218, 181, 0.39);
+
+	position: absolute;
+	top: 85%;
+	left: 15%;
+	z-index: -3;
+	}
